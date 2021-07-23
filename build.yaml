@@ -1,0 +1,9 @@
+name: twilio-tap-zendesk
+build_rpm: false
+release_only: false
+auto_build: false
+pr_validation: true
+
+build:
+  commands:
+    - if [ "$RELEASE_VERSION" ]; then python3 setup.py sdist upload; fi
